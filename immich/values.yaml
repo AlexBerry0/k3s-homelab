@@ -1,7 +1,8 @@
 immich:
-  persistence:
-    library:
-      existingClaim: "immich-library-pvc"
+  immich:
+    persistence:
+      library:
+        existingClaim: "immich-library-pvc"
 
 redis:
   enabled: true
