@@ -7,6 +7,10 @@ immich:
       env:
         - name: TZ
           value: "Pacific/Auckland"
+      probes:
+        startup:
+          spec:
+            failureThreshold: 360
 
   redis:
     enabled: true
