@@ -1,10 +1,4 @@
-immich:
-  immich:
-    persistence:
-      library:
-        existingClaim: "immich-library-pvc"
-    server:
-      env:
+env:
         TZ: "Pacific/Auckland"
         DB_HOSTNAME: "postgres-postgresql"
         DB_USERNAME: "immich"
@@ -14,6 +8,12 @@ immich:
             secretKeyRef:
               name: "postgres-secret"
               key: "password"
+immich:
+  immich:
+    persistence:
+      library:
+        existingClaim: "immich-library-pvc"
+    server:
       probes:
         startup:
           spec:
