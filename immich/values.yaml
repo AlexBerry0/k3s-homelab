@@ -5,15 +5,11 @@ immich:
         existingClaim: "immich-library-pvc"
     server:
       env:
-        - name: TZ
-          value: "Pacific/Auckland"
-        - name: DB_HOSTNAME
-          value: "postgres-postgresql"
-        - name: DB_USERNAME
-          value: "immich"
-        - name: DB_DATABASE_NAME
-          value: "immich"
-        - name: DB_PASSWORD
+        TZ: "Pacific/Auckland"
+        DB_HOSTNAME: "postgres-postgresql"
+        DB_USERNAME: "immich"
+        DB_DATABASE_NAME: "immich"
+        DB_PASSWORD:
           valueFrom:
             secretKeyRef:
               name: "postgres-secret"
