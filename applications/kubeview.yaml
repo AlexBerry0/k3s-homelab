@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://benc-uk.github.io/kubeview/charts'
+    repoURL: 'https://code.benco.io/kubeview/deploy/helm'
     chart: kubeview
     targetRevision: 0.1.3
   destination:
