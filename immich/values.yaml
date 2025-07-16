@@ -3,6 +3,10 @@ immich:
     persistence:
       library:
         existingClaim: "immich-library-pvc"
+    server:
+      env:
+        - name: TZ
+          value: "Pacific/Auckland"
 
   redis:
     enabled: true
