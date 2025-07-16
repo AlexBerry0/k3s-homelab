@@ -1,4 +1,5 @@
-env:
+immich:
+  env:
         TZ: "Pacific/Auckland"
         DB_HOSTNAME: "postgres-postgresql"
         DB_USERNAME: "immich"
@@ -8,7 +9,6 @@ env:
             secretKeyRef:
               name: "postgres-secret"
               key: "password"
-immich:
   immich:
     persistence:
       library:
