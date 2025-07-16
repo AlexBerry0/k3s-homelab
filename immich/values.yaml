@@ -3,7 +3,7 @@ immich:
         TZ: "Pacific/Auckland"
         DB_HOSTNAME: "postgres-postgresql"
         DB_USERNAME: "immich"
-        DB_DATABASE_NAME: "immich"
+        DB_DATABASE_NAME: "postgres"
         DB_PASSWORD:
           valueFrom:
             secretKeyRef:
