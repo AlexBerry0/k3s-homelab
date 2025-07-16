@@ -1,4 +1,3 @@
-# applications/immich-pvc.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -9,7 +8,9 @@ spec:
   source:
     repoURL: 'https://github.com/AlexBerry0/k3s-homelab.git'
     targetRevision: HEAD
-    path: immich/pvc
+    path: immich
+    directory:
+      include: 'pvc.yaml'
   destination:
     server: https://kubernetes.default.svc
     namespace: immich
