@@ -4,5 +4,12 @@ immich:
       library:
         existingClaim: "immich-library-pvc"
 
-redis:
-  enabled: true
+  redis:
+    enabled: true
+
+  postgresql:
+    enabled: false
+    postgresqlHost: "postgres-postgresql"
+    postgresqlUsername: "immich"
+    postgresqlDatabase: "immich"
+    existingSecret: "postgres-postgresql"

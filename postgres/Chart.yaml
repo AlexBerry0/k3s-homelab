@@ -1,0 +1,9 @@
+apiVersion: v2
+name: postgres-wrapper
+description: Wrapper chart to deploy Bitnami's postgresql for Immich.
+type: application
+version: 0.1.0
+dependencies:
+- name: postgresql
+  version: "16.7.19"
+  repository: "https://charts.bitnami.com/bitnami"
