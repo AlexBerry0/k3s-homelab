@@ -1,9 +1,9 @@
 auth:
-  username: "immich"
-  database: "immich"
+  username: immich
+  database: immich
   existingSecret: "postgres-secret"
   secretKeys:
-    userPasswordKey: "password"
+    userPasswordKey: "DB_PASSWORD"
 
 primary:
   persistence:
