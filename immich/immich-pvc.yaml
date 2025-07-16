@@ -1,19 +1,17 @@
+# applications/immich-pvc.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: immich
+  name: immich-pvc
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/immich-app/immich-charts.git'
-    targetRevision: main
-    path: charts/immich
-    helm:
-      valueFiles:
-        - "values.yaml"
+    repoURL: 'https://github.com/AlexBerry0/k3s-homelab.git'
+    targetRevision: HEAD
+    path: immich/pvc
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: immich
   syncPolicy:
     automated:

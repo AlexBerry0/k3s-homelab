@@ -1,14 +1,7 @@
 immich:
   persistence:
     library:
-      enabled: true
-      storageClass: "longhorn"
-      size: 200Gi
-    database:
-      enabled: true
-      storageClass: "longhorn"
-      size: 10Gi
-    redis:
-      enabled: true
-      storageClass: "longhorn"
-      size: 5Gi
+      existingClaim: "immich-library-pvc"
+
+redis:
+  enabled: true
