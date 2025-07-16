@@ -12,3 +12,10 @@ primary:
     size: 10Gi
   extendedConf:
     shared_preload_libraries: 'pg_stat_statements,pgaudit,pgvecto.rs'
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1Gi"
+    limits:
+      cpu: "1"
+      memory: "2Gi"
