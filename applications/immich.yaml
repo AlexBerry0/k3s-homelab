@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/immich-app/immich-charts.git'
-    targetRevision: main
-    path: charts/immich
+    repoURL: 'https://github.com/AlexBerry0/k3s-homelab.git'
+    targetRevision: HEAD
+    path: immich
     helm:
       valueFiles:
-        - "values.yaml"
+        - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: immich
