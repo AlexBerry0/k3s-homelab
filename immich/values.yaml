@@ -7,7 +7,6 @@ immich:
       env:
         - name: TZ
           value: "Pacific/Auckland"
-      extraEnvs:
         - name: DB_HOSTNAME
           value: "postgres-postgresql"
         - name: DB_USERNAME
