@@ -1,0 +1,5 @@
+repoServer:
+  persistence:
+    enabled: true
+    size: 8Gi
+    storageClassName: longhorn
