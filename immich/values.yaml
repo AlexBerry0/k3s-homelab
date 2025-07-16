@@ -7,19 +7,21 @@ immich:
       env:
         - name: TZ
           value: "Pacific/Auckland"
+      extraEnvs:
+        - name: DB_HOSTNAME
+          value: "postgres-postgresql"
+        - name: DB_USERNAME
+          value: "immich"
+        - name: DB_DATABASE_NAME
+          value: "immich"
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: "postgres-secret"
+              key: "password"
       probes:
         startup:
           spec:
             failureThreshold: 360
-    postgresql:
-      host: "postgres-postgresql"
-      username: "immich"
-      database: "immich"
-
   redis:
     enabled: true
-
-  postgresql:
-    auth:
-      existingSecret: "postgres-secret"
-      secretPasswordKey: "password"
