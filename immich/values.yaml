@@ -17,7 +17,10 @@ immich:
 
   postgresql:
     enabled: false
-    postgresqlHost: "postgres-postgresql"
-    postgresqlUsername: "immich"
-    postgresqlDatabase: "immich"
-    existingSecret: "postgres-postgresql"
+    auth:
+      username: "immich"
+      database: "immich"
+      existingSecret: "postgres-secret"
+      secretPasswordKey: "password"
+    primary:
+      host: "postgres-postgresql"
