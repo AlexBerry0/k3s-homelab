@@ -11,16 +11,15 @@ immich:
         startup:
           spec:
             failureThreshold: 360
+    postgresql:
+      host: "postgres-postgresql"
+      username: "immich"
+      database: "immich"
 
   redis:
     enabled: true
 
-postgresql:
-  enabled: false
-
-postgresqlHost: "postgres-postgresql"
-postgresqlUsername: "immich"
-postgresqlDatabase: "immich"
-
-existingSecret: "postgres-secret"
-secretPasswordKey: "password"
+  postgresql:
+    auth:
+      existingSecret: "postgres-secret"
+      secretPasswordKey: "password"
