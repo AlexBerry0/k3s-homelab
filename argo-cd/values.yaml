@@ -1,5 +1,18 @@
+
+redis:
+  persistence:
+    enabled: true
+    storageClass: "longhorn"
+    size: 8Gi
+
+controller:
+  persistence:
+    enabled: true
+    storageClass: "longhorn"
+    size: 5Gi
+
 repoServer:
   persistence:
     enabled: true
-    size: 8Gi
-    storageClassName: longhorn
+    storageClass: "longhorn"
+    size: 10Gi
