@@ -15,12 +15,12 @@ immich:
   redis:
     enabled: true
 
-  postgresql:
-    enabled: false
-    auth:
-      username: "immich"
-      database: "immich"
-      existingSecret: "postgres-secret"
-      secretPasswordKey: "password"
-    primary:
-      host: "postgres-postgresql"
+postgresql:
+  enabled: false
+
+postgresqlHost: "postgres-postgresql"
+postgresqlUsername: "immich"
+postgresqlDatabase: "immich"
+
+existingSecret: "postgres-secret"
+secretPasswordKey: "password"
