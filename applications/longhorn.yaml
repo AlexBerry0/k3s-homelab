@@ -18,6 +18,8 @@ spec:
           defaultClassReplicaCount: 2
         preUpgradeChecker:
           jobEnabled: false
+        global:
+          priorityClassName: "longhorn-critical"
         priorityClass:
           create: true
   destination:
