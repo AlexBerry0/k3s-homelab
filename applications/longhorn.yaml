@@ -1,22 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: immich
+  name: longhorn-system
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/AlexBerry0/k3s-homelab.git'
-    targetRevision: HEAD
-    path: immich
+    repoURL: https://charts.longhorn.io
+    chart: longhorn
+    targetRevision: 1.9.1
     helm:
-      valueFiles:
-        - values.yaml
+      values: |
+        persistence:
+          defaultClass: true
+          defaultClassReplicaCount: 2
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: immich
+    namespace: longhorn-system
   syncPolicy:
     automated:
       prune: true
